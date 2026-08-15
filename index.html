@@ -124,7 +124,10 @@ var app=document.getElementById("app");
 
 function intro(){
  app.innerHTML='<h1>Where should YOU start?</h1>'+
- '<p class="sub">18 quick things – some grammar, some about you. No dictionaries, no swotting up. Answer honestly and I\'ll tell you exactly where to start. From George Alex, English Therapist since 1989.</p>'+
+ '<p class="sub">18 quick things – some grammar, some about you.</p>'+
+ '<p class="sub">No dictionaries, no AI, no extra help.</p>'+
+ '<p class="sub">Answer honestly and I\'ll tell you exactly where to start.</p>'+
+ '<p class="sub">From George Alex, English Therapist since 1989.</p>'+
  '<button class="start-btn" onclick="show()">Start the check</button>';
 }
 
@@ -185,8 +188,8 @@ function result(){
 
  var R=RESULTS[key];
  var html='<span class="badge">'+R.badge+'</span><h2>'+R.title+'</h2><p>'+R.body+'</p>';
- html+='<a class="btn" href="'+R.link+'">'+R.cta+' &rarr;</a>';
- html+='<a class="btn secondary" href="'+CONTACT_LINK+'">Contact me for more details</a>';
+ html+='<a class="btn" href="'+R.link+'" target="_top">'+R.cta+' &rarr;</a>';
+ html+='<a class="btn secondary" href="'+CONTACT_LINK+'" target="_top">Contact me for more details</a>';
  html+='<p class="free-note">'+R.free+'</p>';
  html+='<button class="restart" onclick="restart()">Take the check again</button>';
  app.innerHTML=html;
